@@ -1,4 +1,4 @@
-function test_pwdc
+function pwdc
     switch (uname)
         case Darwin
             pwd | tr -d "\n" | pbcopy
