@@ -1,6 +1,6 @@
 ## collention of fish commands for my own use.
 A collection of useful commands for myself.  
-Includes a lot of forked commands developed by others.  
+Includes forked commands developed by others.  
 supports wsl2(may be few commands not working) and macOS.  
 
 ## command list
