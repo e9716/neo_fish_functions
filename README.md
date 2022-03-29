@@ -1,0 +1,9 @@
+## collention of fish commands for my own use.
+A collection of useful commands for myself.  
+Includes a lot of forked commands developed by others.  
+supports wsl2(may be few commands not working) and macOS.  
+
+## command list
+- bd  -->  quickly go back to a parent directory(0rax/fish-bd)
+- pwdc  -->  copy the current directory path.
+- reload  -->  just reload the fish shell.
