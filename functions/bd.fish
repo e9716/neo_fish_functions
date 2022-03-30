@@ -83,7 +83,7 @@ Options:
     end
 
     if [ "$newpwd" = "$oldpwd" ]
-        if [ (string match -r "\d*" "$argv[1]") -a $argv[1] -gt 0 ]
+        if [ (string match -r "\d+" "$argv[1]") -a $argv[1] -gt 0 ]
             cd (printf "%$argv[1]s" | sed "s/ /..\//g")
         else
             echo "No such occurence." >&2
