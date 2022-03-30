@@ -2,7 +2,7 @@ function reload
     argparse -n bd -x 'c,h' \
         c/config \
         h/help -- $argv
-        or return 1
+    or return 1
 
     set -l help_msg "Description: just reload fish config files.
 
