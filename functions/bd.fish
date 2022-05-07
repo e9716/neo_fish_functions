@@ -91,7 +91,13 @@ Options:
     end
 
     if [ "$newpwd" = "$oldpwd" ]
-        echo "No such occurence." >&2
+        if [ (string match -r "\d+" "$argv[1]") -a $argv[1] -gt 0 ]
+            # support for number args
+            # Ex. `$ bd 1`
+            cd (printf "%$argv[1]s" | sed "s/ /..\//g")
+        else
+            echo "No such occurence." >&2
+        end
     else
         cd "$newpwd"
     end
