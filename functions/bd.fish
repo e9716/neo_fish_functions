@@ -7,13 +7,15 @@
 
 function bd
 
-    argparse -n bd -x 'c,s,i,h' \
+    argparse -n bd -x 'c,s,i,h,d' \
         c/classic \
         s/seems \
         i/insensitive \
+        d/debug \
         h/help -- $argv
     or return 1
 
+    set -l arg (string match -r '[^\/]+$' $argv[1])
     set -l oldpwd (pwd)
     set -l newpwd ""
     set -l opts "$BD_OPT"
@@ -66,6 +68,12 @@ Options:
         set opts seems
     else if set -lq _flag_insensitive
         set opts insensitive
+    else if set -lq _flag_debug
+        echo "---variable list---"
+        echo "arg:" $arg
+        echo "oldpwd:" $oldpwd
+        echo "newpwd:" $newpwd
+        echo "---end---"
     end
 
     if [ (count $argv) = 0 ]
@@ -75,19 +83,15 @@ Options:
 
     switch "$opts"
         case seems
-            set newpwd (echo $oldpwd | sed 's|\(.*/'$argv[1]'[^/]*/\).*|\1|')
+            set newpwd (echo $oldpwd | sed 's|\(.*/'$arg'[^/]*/\).*|\1|')
         case insensitive
-            set newpwd (echo $oldpwd | perl -pe 's|(.*/'$argv[1]'[^/]*/).*|$1|i')
+            set newpwd (echo $oldpwd | perl -pe 's|(.*/'$arg'[^/]*/).*|$1|i')
         case '*' # classic
-            set newpwd (echo $oldpwd | sed 's|\(.*/'$argv[1]'/\).*|\1|')
+            set newpwd (echo $oldpwd | sed 's|\(.*/'$arg'/\).*|\1|')
     end
 
     if [ "$newpwd" = "$oldpwd" ]
-        if [ (string match -r "\d+" "$argv[1]") -a $argv[1] -gt 0 ]
-            cd (printf "%$argv[1]s" | sed "s/ /..\//g")
-        else
-            echo "No such occurence." >&2
-        end
+        echo "No such occurence." >&2
     else
         cd "$newpwd"
     end
