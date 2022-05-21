@@ -7,6 +7,7 @@ supports wsl2(may be few commands not working) and macOS.
 - bd  -->  quickly go back to a parent directory(0rax/fish-bd)
 - pwdc  -->  copy the current directory path.
 - reload  -->  just reload the fish shell.
+- copy --> just copy. supports win(wsl) & mac.
   
 ## how to install
 ### using fisher
