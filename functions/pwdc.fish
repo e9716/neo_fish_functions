@@ -1,3 +1,3 @@
 function pwdc
-    pwd | tr -d "\n" | pbcopy
+    pwd | tr -d "\n" | copy
 end
