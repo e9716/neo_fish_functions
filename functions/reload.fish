@@ -1,5 +1,5 @@
 function reload
-    argparse -n bd -x 'c,h' \
+    argparse -n reload -x 'c,h' \
         c/config \
         h/help -- $argv
     or return 1

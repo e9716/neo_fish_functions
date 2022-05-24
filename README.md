@@ -8,6 +8,7 @@ supports wsl2(may be few commands not working) and macOS.
 - pwdc  -->  copy the current directory path.
 - reload  -->  just reload the fish shell.
 - copy --> just copy. supports win(wsl) & mac.
+- open_fish_config/ofc --> just open the fish config file.
   
 ## how to install
 ### using fisher
