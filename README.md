@@ -4,12 +4,13 @@ Includes forked commands developed by others.
 supports wsl2(may be few commands not working) and macOS.  
   
 ## command list
-- bd  -->  quickly go back to a parent directory(0rax/fish-bd)
-- pwdc  -->  copy the current directory path.
-- reload  -->  just reload the fish shell.
-- copy --> just copy. supports win(wsl) & mac.
-- open_fish_config/ofc --> just open the fish config file.
-  
+- bd  -->  Quickly go back to a parent directory(0rax/fish-bd)
+- pwdc  -->  Copy the current directory path.
+- reload  -->  Just reload the fish shell.
+- copy --> just copy. Supports win(wsl) & mac.
+- open_fish_config/ofc --> Just open the fish config file.
+- get_os_name --> Returns the name of the OS distribution you are currently using.
+
 ## how to install
 ### using fisher
 ```shell
