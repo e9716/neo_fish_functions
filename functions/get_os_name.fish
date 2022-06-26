@@ -1,5 +1,5 @@
 function get_os_name
-    argparse -n open_fish_config -x 'w,h' \
+    argparse -n get_os_name -x 'w,h' \
         w/wsl \
         h/help -- $argv
     or return 1
