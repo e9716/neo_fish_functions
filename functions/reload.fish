@@ -22,7 +22,6 @@ Options:
         source (string join '/' $__fish_config_dir config.fish)
         echo reloaded $__fish_config_dir/config.fish
     else if set -lq _flag_init
-        exec fish
         init_main -c
         exec fish
     else
