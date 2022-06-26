@@ -36,21 +36,29 @@ Examples:
             echo false
         end
     else
+        # ---Linux
         for i in (string split ' ' (echo (ls -a /etc/ | grep -E '.*release')))
-            if test $i != 'os-release'; or test $i != 'system-release';
-                switch (echo (string match -r '(.+)(-release)' $i)[2])
-                    case 'lsb' 'debian' 'lsb-debian' 'redhat' 'oracle'
-                        if type -q lsb_release
-                            echo (echo (lsb_release -i) | string match -r '(.+):(.+)')[3] | string trim | string lower
-                            break
-                        else
-                            echo please install lsb-release.
-                            echo Ex: \$ apt-get install lsb-release
-                        end
-                    case *
-                        echo (string match -r '(.+)(-release)' $i)[2]
-                end
+            switch (echo (string match -r '(.+)(-release)' $i)[2])
+                case lsb debian lsb-debian redhat oracle
+                    if type -q lsb_release
+                        echo (echo (lsb_release -i) | string match -r '(.+):(.+)')[3] | string trim | string lower
+                        break
+                    else
+                        echo please install lsb-release.
+                        echo Ex: \$ apt-get install lsb-release
+                        break
+                    end
+                case os system
+                    continue
+                case *
+                    echo (string match -r '(.+)(-release)' $i)[2]
+                    break
             end
+        end
+        # ---Mac
+        switch (uname)
+            case Darwin
+                echo macos
         end
     end
 end
