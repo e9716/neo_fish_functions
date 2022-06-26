@@ -1,6 +1,6 @@
 function get_os_name_strict
     if test -e /etc/debian_version; or test -e /etc/debian_release;
-        if test -e /etc/lsb-debian_release
+        if test -e /etc/lsb-debian-release
             echo 'ubuntu'
         else
             echo 'debian'
