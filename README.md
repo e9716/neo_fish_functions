@@ -10,6 +10,7 @@ supports wsl2(may be few commands not working) and macOS.
 - copy --> just copy. Supports win(wsl) & mac.
 - open_fish_config/ofc --> Just open the fish config file.
 - get_os_name --> Returns the name of the OS distribution you are currently using.
+- alias_safe --> make alias if given command has already installed. (experimental)
 
 ## how to install
 ### using fisher
