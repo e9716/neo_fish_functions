@@ -10,7 +10,7 @@ current_dir = Path(os.getcwd())
 
 def gcc_auto():
     parser = argparse.ArgumentParser(
-        description='generate .gitignore from gitignore.io')
+        description='compile and run a c file.')
     parser.add_argument('-d', '--debug',
                         action='store_true',
                         help='run with debug mode.')
