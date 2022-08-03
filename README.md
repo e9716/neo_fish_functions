@@ -7,10 +7,11 @@ supports wsl2(may be few commands not working) and macOS.
 - bd  -->  Quickly go back to a parent directory(0rax/fish-bd)
 - pwdc  -->  Copy the current directory path.
 - reload  -->  Just reload the fish shell.
-- copy --> just copy. Supports win(wsl) & mac.
+- copy --> just Copy. Supports win(wsl) & mac.
 - open_fish_config/ofc --> Just open the fish config file.
 - get_os_name --> Returns the name of the OS distribution you are currently using.
-- alias_safe --> make alias if given command has already installed. (experimental)
+- alias_safe --> Make alias if given command has already installed. (experimental)
+- install --> Simple command to install software. Supports wsl & mac. mac -> act as brew, arch -> act as pacman & yay, ubuntu -> act as apt.
 
 ## how to install
 ### using fisher

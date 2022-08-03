@@ -1,7 +1,7 @@
 function install
     set -l arg $argv[1]
 
-    if type -q $arg
+    if not type -q $arg
         return
     else
         switch (get_os_name)
@@ -11,7 +11,11 @@ function install
                 sudo apt autoremove -y
                 sudo apt install $arg -y
             case arch
-                yes | sudo pacman -S $arg
+                if type -q yay
+                    yes | yay -S $arg
+                else
+                    yes | sudo pacman -S $arg
+                end
             case macos
                 if type -q brew
                     brew install $arg
