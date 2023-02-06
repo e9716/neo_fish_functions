@@ -16,5 +16,5 @@ supports wsl2(may be few commands not working) and macOS.
 ## how to install
 ### using fisher
 ```shell
-fisher install e9716/my_fish_functions
+fisher install r4ai/my_fish_functions
 ```
