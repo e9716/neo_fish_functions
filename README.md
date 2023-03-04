@@ -12,7 +12,7 @@ supports wsl2(may be few commands not working) and macOS.
 - get_os_name --> Returns the name of the OS distribution you are currently using.
 - alias_safe --> Make alias if given command has already installed. (experimental)
 - install --> Simple command to install software. Supports wsl & mac. mac -> act as brew, arch -> act as pacman & yay, ubuntu -> act as apt.
-- do --> Run commands in scripts folder in project directory.
+- do_script --> Run commands in scripts folder in project directory.
 
 ## how to install
 ### using fisher

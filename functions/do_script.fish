@@ -1,7 +1,7 @@
 #!/usr/bin/env fish
 # -*-  mode:fish; tab-width:4  -*-
 
-function do
+function do_script
     set -l cwd (pwd)
     set -l root (git rev-parse --show-toplevel 2>/dev/null)
 
