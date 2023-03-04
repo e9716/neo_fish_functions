@@ -1,8 +1,8 @@
 ## collection of fish commands for my own use.
-A collection of useful commands for myself.  
-Includes forked commands developed by others.  
-supports wsl2(may be few commands not working) and macOS.  
-  
+A collection of useful commands for myself.
+Includes forked commands developed by others.
+supports wsl2(may be few commands not working) and macOS.
+
 ## command list
 - bd  -->  Quickly go back to a parent directory(0rax/fish-bd)
 - pwdc  -->  Copy the current directory path.
@@ -12,6 +12,7 @@ supports wsl2(may be few commands not working) and macOS.
 - get_os_name --> Returns the name of the OS distribution you are currently using.
 - alias_safe --> Make alias if given command has already installed. (experimental)
 - install --> Simple command to install software. Supports wsl & mac. mac -> act as brew, arch -> act as pacman & yay, ubuntu -> act as apt.
+- do --> Run commands in scripts folder in project directory.
 
 ## how to install
 ### using fisher
