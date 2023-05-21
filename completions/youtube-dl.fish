@@ -7,4 +7,4 @@ complete -c youtube-dl -s H -l highquority -x --description "Download with high 
 complete -c youtube-dl -n "not __fish_seen_subcommand_from $commands" \
     -a video -d "Download videos"
 complete -c youtube-dl -n "not __fish_seen_subcommand_from $commands" \
-    -a audio -d "Download audios"
+    -a music -d "Download musics"
